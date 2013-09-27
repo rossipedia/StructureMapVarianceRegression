@@ -27,6 +27,7 @@ namespace NotWorking
         {
             var instance = _container.GetInstance<ISomeInterface<Derived>>();
             Assert.NotNull(instance);
+            Assert.That(instance, Is.InstanceOf<Concrete>());
         }
     }
 }
